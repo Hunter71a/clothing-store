@@ -1,3 +1,5 @@
+import { Outlet } from 'react-router-dom';
+
 import Catalogue from '../../components/catalogue/catalogue.component';
 
 const Home = () => {
@@ -29,7 +31,12 @@ const Home = () => {
     },
   ];
 
-  return <Catalogue categories={categories} />;
+  return (
+    <div>
+      <Catalogue categories={categories} />
+      <Outlet />
+    </div>
+  );
 };
 
 export default Home;
