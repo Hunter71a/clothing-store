@@ -1,3 +1,10 @@
+# Practice e-commerce website built from Udemy tutorial
+
+This project was created to practice building things with React in 2022
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
