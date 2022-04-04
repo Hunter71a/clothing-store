@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 import { CartContext } from '../../contexts/cart.context';
 
@@ -9,6 +10,14 @@ import './cart-dropdown.styles.scss';
 
 const CartDropdown = () => {
   const { cartItems } = useContext(CartContext);
+
+  //alt way to navigate using useNavigate
+  // Wrapping the button with link seemed easier without the need for helper functions
+  /*   const navigate = useNavigate();
+  const goToCheckoutHandler = () => {
+    navigate('/checkout');
+  }; */
+
   return (
     <div className='cart-dropdown-container'>
       <div className='cart-items'>
@@ -16,7 +25,9 @@ const CartDropdown = () => {
           <CartItem key={item.id} cartItem={item} />
         ))}
       </div>
-      <Button>Checkout</Button>
+      <Link to='/checkout'>
+        <Button>Checkout</Button>
+      </Link>
     </div>
   );
 };
