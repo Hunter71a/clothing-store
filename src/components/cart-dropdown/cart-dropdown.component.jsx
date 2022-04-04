@@ -9,7 +9,9 @@ import CartItem from '../cart-item/cart-item.component';
 import './cart-dropdown.styles.scss';
 
 const CartDropdown = () => {
-  const { cartItems } = useContext(CartContext);
+  const { cartItems, isCartOpen, setIsCartOpen } = useContext(CartContext);
+
+  const toggleIsCartOpen = () => setIsCartOpen(!isCartOpen);
 
   //alt way to navigate using useNavigate
   // Wrapping the button with link seemed easier without the need for helper functions
@@ -26,7 +28,7 @@ const CartDropdown = () => {
         ))}
       </div>
       <Link to='/checkout'>
-        <Button>Checkout</Button>
+        <Button onClick={toggleIsCartOpen}>Checkout</Button>
       </Link>
     </div>
   );

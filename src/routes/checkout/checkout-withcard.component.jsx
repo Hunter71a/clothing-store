@@ -8,14 +8,15 @@ import './checkout.styles.scss';
 const Checkout = () => {
   const { setIsCartOpen, cartItems, addItemToCart } = useContext(CartContext);
 
+  //close shopping cart to unclutter view
+  useEffect(() => {
+    setIsCartOpen(false);
+  }, []);
+
   const totalPurchase = cartItems.reduce(
     (total, cartItem) => total + cartItem.price * cartItem.quantity,
     0
   );
-
-  useEffect(() => {
-    setIsCartOpen(false);
-  }, []);
 
   return (
     <div className='checkout-container'>
