@@ -7,7 +7,7 @@ import { getCategoriesAndDocuments } from '../utils/firebase/firebase.utils';
 //import SHOP_DATA from '../assets/shop_data/shop-data';
 
 export const CategoriesContext = createContext({
-  categoriesMap: [],
+  categoriesMap: {},
 });
 
 export const CategoriesProvider = ({ children }) => {
