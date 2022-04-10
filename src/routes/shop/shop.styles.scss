@@ -1,26 +1,6 @@
-.products-container.old {
+.products-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 10px;
   row-gap: 50px;
 }
-
-
-.products-container {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap:170px;
-  align-content: space-between;
-  align-items: flex-start;
-  margin: 20px 20px 20px 30px;
-  scroll-padding-block: 30px;
-  justify-content: center;
-  padding-bottom: 150px;
-
-  .item {
-    width: 300px;
-    height: 220px;
-    margin: auto; 
-  }
-}
-
