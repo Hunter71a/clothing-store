@@ -9,7 +9,6 @@ const DirectoryItem = ({ category: { imageUrl, title } }) => {
         className='background-image'
         style={{ backgroundImage: `url(${imageUrl})` }}
       />
-
       <div className='body'>
         <Link to={`/shop/${title}`}>
           <h2>{title}</h2>
